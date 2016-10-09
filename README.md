@@ -3,10 +3,43 @@
 I decided to write this because I want to have a free ichat in school lan with my GF at first. However, since we always meet, ichat is not required. Recently, one of my friends spent much data flow on ichat with his girlfriend, so I pick it again. It supports IPv4 and IPv6, uses TCP ~~and not supports audio~~ temporarily. **Not finished yet** , next step is to ~~add audio and~~ change into UDP. Maybe we could define the current version as ~~v0.1~~ `v0.2`. So worried about your data flow fee on ichat? Use this tool to avoid that.
 
 ## Platform
+### Windows
 This small script is written in python 3.5, using some packages, all listed below.
 * **cv2** : cv2 is the openCV packages for python. You can download `openCV` from its [official site](http://opencv.org/). Also, install by pip `pip install opencv-python` is needed. Then, install `ffmpeg`. Download it from [here](http://ffmpeg.org/), I suggest you chose the binary file and just install it simply. After you install `cv2`, `numpy` and `matplotlib` will also be installed.
 * **pyaudio** : packages for dealing with audio. You can install it by `pip3 install pyaudio`.
 * Built-in packages: `sys`, `struct`, `pickle`, `time`, `threading`, `argparse`, `zlib`, and `socket`.
+
+### Linux
+To install `OpenCV` with Python support in Linux is a little troublesome. You can download `opencv.sh` to install it easily, or follow these steps. Attention, if you 
+```bash
+$ cd Code
+$ mkdir ichat && cd ichat
+$ sudo apt-get install build-essential libgtk2.0-dev libjpeg-dev libtiff5-dev libjasper-dev libopenexr-dev cmake python-dev python-numpy python-tk libtbb-dev libeigen2-dev yasm libfaac-dev libopencore-amrnb-dev libopencore-amrwb-dev libtheora-dev libvorbis-dev libxvidcore-dev libx264-dev libqt4-dev libqt4-opengl-dev sphinx-common texlive-latex-extra libv4l-dev libdc1394-22-dev libavcodec-dev libavformat-dev libswscale-dev
+$ wget https://github.com/Itseez/opencv/archive/2.4.13.zip
+$ unzip 2.4.13.zip
+$ cd 2.4.13
+$ mkdir release && cd release
+$ cmake -D WITH_TBB=ON -D BUILD_NEW_PYTHON_SUPPORT=ON -D WITH_V4L=ON -D INSTALL_C_EXAMPLES=ON -D INSTALL_PYTHON_EXAMPLES=ON -D BUILD_EXAMPLES=ON -D WITH_QT=ON -D WITH_GTK=ON -D WITH_OPENGL=ON ..
+$ sudo make
+$ sudo make install
+$ sudo nano /etc/ld.so.conf.d/opencv.conf   
+$ Input /usr/local/lib and save
+$ sudo ldconfig -v
+$ sudo nano /etc/bash.bashrc
+$ --Add the following two lines in the end of bash.bashrc
+$ PKG_CONFIG_PATH=$PKG_CONFIG_PATH:/usr/local/lib/pkgconfig
+  export PKG_CONFIG_PATH
+```
+
+Attention, if you use Python3, you may need to specify the path. Add some options below.
+```bash
+$ cmake -D CMAKE_BUILD_TYPE=Release \
+        -D CMAKE_INSTALL_PREFIX=/usr/local  \
+           PYTHON3_EXECUTABLE=/usr/bin/python3 \
+           PYTHON_INCLUDE_DIR=/usr/include/python3.4 \
+           PYTHON_LIBRARY=/usr/lib/x86_64-linux-gnu/libpython3.4m.so \
+           PYTHON3_NUMPY_INCLUDE_DIRS=/usr/local/lib/python3.4/dist-packages/numpy/core/include ..
+```
 
 ## Usage
 Just run `python3 main.py <parameters>`. Also, you can download the executable binary file `ichat.exe` from my cloud storage: [here](http://7xktmz.com1.z0.glb.clouddn.com/ichat.exe). Press `Esc` or `Ctrl-C` to stop this tool. The parameters are:
@@ -24,6 +57,7 @@ Just run `python3 main.py <parameters>`. Also, you can download the executable b
 * 2016-9-23: Add this project, video is ok. Define `v0.1`.
 * 2016-9-24: Add audio transmission, add quality settings.
 * 2016-10-6: Build repository.
+* 2016-10-9: Add Linux guide.
 
 # License
 All codes in this repository are licensed under the terms you may find in the file named "LICENSE" in this directory.
