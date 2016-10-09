@@ -50,7 +50,7 @@ Just run `python3 main.py <parameters>`. Also, you can download the executable b
 * --noself: The tool will display both the remote and your videos in default. If you do not need to show yourself on your screen, use `--noself=True`. Do not set any value to this flag if you need to observe your image.
 * In `Remote`, press `Esc` to quit, in `You`, press `Esc` to close the window of yourself, but chat remains.
 * One screenshot for usage is below. I had an ichat with myself. If you double click `ichat.exe`, you will see yourself.    
-<img src="http://7xktmz.com1.z0.glb.clouddn.com/lan-video-v0.1.png" width = "400px">
+<img src="http://7xktmz.com1.z0.glb.clouddn.com/ichat-show-1.png" width = "400px">
 
 
 ## Update-logs
