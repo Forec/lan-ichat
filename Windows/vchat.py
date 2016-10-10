@@ -27,7 +27,6 @@ import numpy as np
 
 class Video_Server(threading.Thread):
     def __init__(self, port, version) :
-        print("VEDIO server starts...")
         threading.Thread.__init__(self)
         self.setDaemon(True)
         self.ADDR = ('', port)
@@ -35,8 +34,6 @@ class Video_Server(threading.Thread):
             self.sock = socket(AF_INET ,SOCK_STREAM)
         else:
             self.sock = socket(AF_INET6 ,SOCK_STREAM)
-        self.sock.bind(self.ADDR)
-        self.sock.listen(1)
     def __del__(self):
         self.sock.close()
         try:
@@ -44,6 +41,9 @@ class Video_Server(threading.Thread):
         except:
             pass
     def run(self):
+        print("VEDIO server starts...")
+        self.sock.bind(self.ADDR)
+        self.sock.listen(1)
         conn, addr = self.sock.accept()
         print("remote VEDIO client success connected...")
         data = "".encode("utf-8")

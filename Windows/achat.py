@@ -34,7 +34,6 @@ RECORD_SECONDS = 0.5
 
 class Audio_Server(threading.Thread):
     def __init__(self, port, version) :
-        print("AUDIO server starts...")
         threading.Thread.__init__(self)
         self.setDaemon(True)
         self.ADDR = ('', port)
@@ -44,8 +43,6 @@ class Audio_Server(threading.Thread):
             self.sock = socket(AF_INET6 ,SOCK_STREAM)
         self.p = pyaudio.PyAudio()
         self.stream = None
-        self.sock.bind(self.ADDR)
-        self.sock.listen(1)
     def __del__(self):
         self.sock.close()
         if self.stream is not None:
@@ -53,6 +50,9 @@ class Audio_Server(threading.Thread):
             self.stream.close()
         self.p.terminate()
     def run(self):
+        print("AUDIO server starts...")
+        self.sock.bind(self.ADDR)
+        self.sock.listen(1)
         conn, addr = self.sock.accept()
         print("remote AUDIO client success connected...")
         data = "".encode("utf-8")
