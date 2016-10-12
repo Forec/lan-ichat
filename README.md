@@ -57,6 +57,10 @@ Just run `python3 main.py <parameters>`. Also, you can download the executable b
 * 2016-9-24: Add audio transmission, add quality settings.
 * 2016-10-6: Build repository.
 * 2016-10-9: Add Linux guide.
+* 2016-10-13: Add authorisation.
 
 # License
 All codes in this repository are licensed under the terms you may find in the file named "LICENSE" in this directory.
+
+# 授权声明
+我已授权[实验楼](https://www.shiyanlou.com/)使用此仓库中的代码并发表此项目教程，你可以在这里查看对应的[教程](https://www.shiyanlou.com/courses/672)。
