@@ -10,9 +10,8 @@ This small script is written in python 3.5, using some packages, all listed belo
 * Built-in packages: `sys`, `struct`, `pickle`, `time`, `threading`, `argparse`, `zlib`, and `socket`.
 
 ### Linux
-To install `OpenCV` with Python support in Linux is a little troublesome. You can download `opencv.sh` to install it easily, or follow these steps. Attention, if you 
+To install `OpenCV` with Python support in Linux is a little troublesome. You can download [opencv.sh](http://7xktmz.com1.z0.glb.clouddn.com/opencv.sh) to install it easily, or follow these steps. Attention, if you 
 ```bash
-$ cd Code
 $ mkdir ichat && cd ichat
 $ sudo apt-get install build-essential libgtk2.0-dev libjpeg-dev libtiff5-dev libjasper-dev libopenexr-dev cmake python-dev python-numpy python-tk libtbb-dev libeigen2-dev yasm libfaac-dev libopencore-amrnb-dev libopencore-amrwb-dev libtheora-dev libvorbis-dev libxvidcore-dev libx264-dev libqt4-dev libqt4-opengl-dev sphinx-common texlive-latex-extra libv4l-dev libdc1394-22-dev libavcodec-dev libavformat-dev libswscale-dev
 $ wget https://github.com/Itseez/opencv/archive/2.4.13.zip
