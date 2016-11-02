@@ -125,7 +125,8 @@ class Video_Client(threading.Thread):
         if check.decode("utf-8") != "S":
             return
         print ("receive authend")
-        self.cap = cv2.VideoCapture(0)
+        #self.cap = cv2.VideoCapture(0)
+        self.cap = cv2.VideoCapture("test.mp4")
         if self.showme:
             cv2.namedWindow('You', cv2.WINDOW_NORMAL)
         print ("remote VEDIO client connected...")

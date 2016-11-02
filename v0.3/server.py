@@ -72,9 +72,3 @@ if __name__ == '__main__':
     contact2to1a.start()
     while True:
         time.sleep(1)
-        # if not vserver.isAlive() or not vclient.isAlive():
-        #     print("Video connection lost...")
-        #     sys.exit(0)
-        # if not aserver.isAlive() or not aclient.isAlive():
-        #     print("Audio connection lost...")
-        #     sys.exit(0)
