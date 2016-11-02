@@ -2,8 +2,13 @@
 > This project is a simple video chat tool.   
 It supports IPv4 and IPv6, using TCP protocal ~~and not supports audio~~ temporarily. **Not finished yet** , next step is to ~~add audio and~~ change into UDP. **The current stable version is `v0.2`**, the current developing version is `v0.3`. 
 
-
 **注：授权实验楼发表的教程对应版本为 v0.2， 该部分代码在 v0.2/Linux 下。**
+
+## New Features
+`v0.3` will provide the following functions.
+* Two hosts using different IP protocals can contact by a server, which will be provided in `v0.3`.
+* Everywhere, not only lan, can have an ichat using `v0.3`.
+* One of the typical using: Your host is in a college lan, using IPv6; another host is in the wide Internet, like home or hotel, using IPv4. The two hosts can build a contact in `v0.3`.
 
 ## Platform (v0.2)
 
