@@ -1,10 +1,14 @@
 # LAN iChat （局域网内的视频聊天软件）
 > This project is a simple video chat tool.   
-I decided to write this because I want to have a free ichat in school lan with my GF at first. However, since we always meet, ichat is not required. Recently, one of my friends spent much data flow on ichat with his girlfriend, so I pick it again. It supports IPv4 and IPv6, uses TCP ~~and not supports audio~~ temporarily. **Not finished yet** , next step is to ~~add audio and~~ change into UDP. Maybe we could define the current version as ~~v0.1~~ `v0.2`. So worried about your data flow fee on ichat? Use this tool to avoid that.
+It supports IPv4 and IPv6, using TCP protocal ~~and not supports audio~~ temporarily. **Not finished yet** , next step is to ~~add audio and~~ change into UDP. **The current stable version is `v0.2`**, the current developing version is `v0.3`. 
 
-## Platform
+
+**注：授权实验楼发表的教程对应版本为 v0.2， 该部分代码在 v0.2/Linux 下。**
+
+## Platform (v0.2)
+
 ### Windows
-This small script is written in python 3.5, using some packages, all listed below.
+The script is written in python 3.5, using some packages, all listed below.
 * **cv2** : cv2 is the openCV packages for python. You can download `openCV` from its [official site](http://opencv.org/). Also, install by pip `pip install opencv-python` is needed. Then, install `ffmpeg`. Download it from [here](http://ffmpeg.org/), I suggest you chose the binary file and just install it simply. After you install `cv2`, `numpy` and `matplotlib` will also be installed.
 * **pyaudio** : packages for dealing with audio. You can install it by `pip3 install pyaudio`.
 * Built-in packages: `sys`, `struct`, `pickle`, `time`, `threading`, `argparse`, `zlib`, and `socket`.
@@ -54,10 +58,11 @@ Just run `python3 main.py <parameters>`. Also, you can download the executable b
 
 ## Update-logs
 * 2016-9-23: Add this project, video is ok. Define `v0.1`.
-* 2016-9-24: Add audio transmission, add quality settings.
+* 2016-9-24: Add audio transmission, add quality settings, defile `v0.2`.
 * 2016-10-6: Build repository.
-* 2016-10-9: Add Linux guide.
+* 2016-10-9: Add Linux version for `v0.2`.
 * 2016-10-13: Add authorisation.
+* 2016-11-2: Start updating v0.3, supply a protocal-crossed version, two hosts using IPv4 and IPv6 can contact in this version.
 
 # License
 All codes in this repository are licensed under the terms you may find in the file named "LICENSE" in this directory.
