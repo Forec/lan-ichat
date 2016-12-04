@@ -1,4 +1,9 @@
 # LAN iChat （局域网内的视频聊天软件）
+
+[![License](http://7xktmz.com1.z0.glb.clouddn.com/license-UDL.svg)](https://github.com/Forec/lan-ichat/blob/master/LICENSE) 
+[![Build Status](https://travis-ci.org/Forec/lan-ichat.png)](https://travis-ci.org/Forec/lan-ichat) 
+[![Doc](http://7xktmz.com1.z0.glb.clouddn.com/docs-icon.svg)](https://github.com/Forec/lan-ichat/)
+
 > This project is a simple video chat tool.   
 It supports IPv4 and IPv6, using TCP protocal temporarily. Not finished yet , next step is to change into UDP. **The current stable version is `v0.2`**, the current developing version is `v0.4`. **If you have thoughts for any of them, please [e-mail me](mailto:forec@bupt.edu.cn) or just open your PR, I am very glad to learn from your brilliant idea.**
 
@@ -92,6 +97,7 @@ In server, run `python2 server.py` to start server, remember to check the 4 inst
 * 2016-10-13: Add authorisation.
 * 2016-11-1: Start updating to `v0.3`, supply a protocal-crossed version, two hosts using IPv4 and IPv6 can contact in this version.
 * 2016-11-2: Finish `v0.3`, which is an unstable version, it will be improved a lot in `v0.4`.
+* 2016-12-4: Build test, ready to update v0.4 before 2017.
 
 # License
 All codes in this repository are licensed under the terms you may find in the file named "LICENSE" in this directory.
